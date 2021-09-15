@@ -1,14 +1,21 @@
 package com.bijay.entities;
 
+import javax.sql.DataSource;
+
 public class FootBallGame implements Game{
     private Team homeTeam;
     private Team awayTeam;
+    private DataSource dataSource;
 
     public FootBallGame() {}
 
     public FootBallGame(Team homeTeam, Team awayTeam){
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
+    }
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
     }
 
     @Override
